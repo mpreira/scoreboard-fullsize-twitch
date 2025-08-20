@@ -2,6 +2,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //COMPOSANTS
+import TeamLeft from './components/TeamLeft';
+import TeamRight from './components/TeamRight';
 import Time from './components/Time';
 import Remote from './components/Remote';
 //FONCTIONS
@@ -9,6 +11,7 @@ import './utils/Time';
 // STYLES
 import './App.css';
 import './styles/styles.css';
+
 
 function App() {
   return (
@@ -19,7 +22,9 @@ function App() {
             <main>
               <div className="inner">
                 <div className="box">
+                  <TeamLeft />
                   <Time />
+                  <TeamRight />
                 </div>
               </div>
             </main>
