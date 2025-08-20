@@ -33,7 +33,7 @@ const Remote = () =>{
         <button id="resetScores">Reset Scores</button>
         <div className="timeControl">
             <h2>Time Control</h2>
-            <div className="time" id="time">
+            <div id="time">
                 <span id="minutes">00</span>:<span id="seconds">00</span>
             </div>
             <button id="start">Start</button>

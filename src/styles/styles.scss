@@ -1,4 +1,13 @@
+// IMPORT
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap');
+// COULEURS
+$england-red : #ca0429;
+$england-white : #ffffff;
+$usa-blue: #052d5c;
+$usa-red: #b4113d;
+$gloria-red: #9e1b52;
+$gloria-purple-1 : #77439E;
+$gloria-pale-lilac: #e5dbe7;
 
 * {
     margin: 0;
@@ -10,10 +19,13 @@
     width: 1920px; // 1280px for 16:9 aspect ratio
     height: 1080px; // 720px for 16:9 aspect ratio
     display: flex;
+    flex-direction: column-reverse;
 }
 
 .box {
     width: 80%;
+    margin-left: 10%;
+    display: flex;
 }
 
 .score {
@@ -90,10 +102,10 @@
 }
 
 .team {
-    width: 35%; //80px;
+    width: 43%; //80px;
 
     p {
-        height: 100%;
+        height: 90%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -107,20 +119,48 @@
 
 .teamColor {
     width: 100%;
-    height: 5px;
+    height: 10px;
 }
 
 #teamColorLeft {
-    background-color: #b2d9f4;
+    background-color: $england-red;
+}
+
+#teamNameLeft {
+    color: $england-red;
+    background-color: $england-white;
 }
 
 #teamColorRight {
-    background-color: #be2b27;
+    background-color: $usa-blue;
+}
+
+#teamNameRight {
+    color: $usa-red;
+    background-color: white;
+}
+
+.BlockTeamLeft, .BlockTeamRight {
+    width: 40%;
+    height: 100px;
+    display: flex;
+}
+
+.teamOne{
+    display: flex;
+    width: 100%;
+    color:$england-white;
+}
+
+.teamTwo {
+    display: flex;
+    width: 100%;
+    color: white;
 }
 
 .logoTeam {
-    width: 15%; //40px;
-    background-color: #ffffff;
+    //width: 15%; //40px;
+    height: 100px;
 
     img {
         width: 100%;
@@ -133,8 +173,8 @@
 }
 
 .teamScore {
-    width: 15%; //40px;
-    background-color: #77439E;
+    width: 30%; //40px;
+    background-color: $gloria-red;
     height: 100%;
     display: flex;
     align-items: center;
@@ -142,7 +182,7 @@
     line-height: 40px;
     font-size: 2em;
     font-weight: 500;
-    color: #e5dbe7;
+    color: $gloria-pale-lilac;
 }
 
 .separator {
@@ -152,26 +192,25 @@
     align-items: center;
     justify-content: center;
     font-size: 2.5em;
-    background-color: #77439E;
-    color: #e5dbe7;
+    background-color: $gloria-purple-1;
+    color: $gloria-pale-lilac;
 }
 
 .time {
-    width: 9.94%;
-    height: 60px;
-    background-color: #e5dbe7;
-    color: #77439E;
+    width: 15%;
+    height: 100px;
+    background-color: $gloria-pale-lilac;
+    color: $gloria-red;
     align-items: center;
     justify-content: center;
-    font-size: 2em;
+    font-size: 3em;
     display: flex;
-    margin-left: 17.64%;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    //margin-left: 50%;
+    margin-bottom: 5%;
 }
 
 .separatorTime {
-    color: #77439E;
+    color: $gloria-red;
     font-size: 1em;
     margin-left: 2px;
     margin-right: 2px;
