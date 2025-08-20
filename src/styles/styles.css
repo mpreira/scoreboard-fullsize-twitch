@@ -27,28 +27,32 @@
   margin-top: 40px;
 }
 
-.cards {
-  width: 42.64%;
-  margin-left: 40px;
+.cardsLeft, .cardsRight {
   display: flex;
-  justify-content: space-between;
   position: absolute;
-  top: 120px;
+}
+
+.cardsLeft {
+  margin-left: 40px;
+}
+
+.cardsRight {
+  right: 0;
 }
 
 .card {
   position: absolute;
-  top: -6px;
+  top: -35px;
   z-index: -1;
-  height: 30px;
+  height: 70px;
 }
 
 #yellowCardLeftTwo {
-  left: 10px;
+  left: 20px;
 }
 
 #yellowCardLeftThree {
-  left: 20px;
+  left: 40px;
 }
 
 #yellowCardRightTwo {

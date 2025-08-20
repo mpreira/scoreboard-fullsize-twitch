@@ -1,8 +1,22 @@
 import EnglandLogo from '../assets/LOGOS/Flag_of_England.svg.png';
+import Yellow from '../assets/cards/carton_jaune.png';
+import Red from '../assets/cards/carton_rouge.png';
+import { getTeamName } from '../utils/Control';
 
 const TeamLeft = () => {
     return (
         <div className="BlockTeamLeft">
+            <div className="cardsLeft">
+                {/* cards for team members or scores can be added here */}
+                <div className="teamLeftCards">
+                    <img src={Yellow} alt="Carton Jaune" className="card" id="yellowCardLeftOne" />
+                    <img src={Yellow} alt="Carton Jaune" className="card" id="yellowCardLeftTwo" />
+                    <img src={Yellow} alt="Carton Jaune" className="card" id="yellowCardLeftThree" />
+                    <img src={Red} alt="Carton Rouge" className="card" id="redCardLeftOne" />
+                    <img src={Red} alt="Carton Rouge" className="card" id="redCardLeftTwo" />
+                    <img src={Red} alt="Carton Rouge" className="card" id="redCardLeftThree" />
+                </div>
+            </div>
             <div className="teamOne">
                 {/* logo */}
                 <div className="logoTeam" id="logoLeft" >
@@ -12,17 +26,13 @@ const TeamLeft = () => {
                 {/* nom d'équipe */}
                 <div className="team" id="teamLeft">
                     <div className="teamColor" id="teamColorLeft"></div>
-                    <p id="teamNameLeft">Équipe 1</p>
+                    <p id="teamNameLeft">{getTeamName('left')}</p>
                 </div>
 
                 {/* score */}
                 <div className="teamScore" id="scoreLeft">
                     <p></p>
                 </div>
-            </div>
-
-            <div className="cards">
-                {/* cards for team members or scores can be added here */}
             </div>
         </div>
     )

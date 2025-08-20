@@ -1,5 +1,4 @@
 // IMPORT
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //COMPOSANTS
 import TeamLeft from './components/TeamLeft';
@@ -8,6 +7,7 @@ import Time from './components/Time';
 import Remote from './components/Remote';
 //FONCTIONS
 import './utils/Time';
+import './utils/Update';
 // STYLES
 import './App.css';
 import './styles/styles.css';
