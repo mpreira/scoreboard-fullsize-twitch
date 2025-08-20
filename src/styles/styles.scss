@@ -120,14 +120,14 @@ $gloria-pale-lilac: #e5dbe7;
         align-items: center;
         justify-content: center;
         line-height: 40px;
-        font-size: 26px;
+        font-size: 32px;
         font-weight: 700;
         text-transform: uppercase;
         color: #ffffff;
     }
 }
 
-.teamColor {
+.teamColor, .space {
     width: 100%;
     height: 10px;
 }
@@ -187,12 +187,21 @@ $gloria-pale-lilac: #e5dbe7;
     background-color: $gloria-red;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    line-height: 40px;
-    font-size: 2em;
     font-weight: 500;
     color: $gloria-pale-lilac;
+    p {
+        height: 90%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: 700;
+    }
+
 }
 
 .separator {

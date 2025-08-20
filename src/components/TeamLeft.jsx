@@ -30,8 +30,9 @@ const TeamLeft = () => {
                 </div>
 
                 {/* score */}
-                <div className="teamScore" id="scoreLeft">
-                    <p></p>
+                <div className="teamScore">
+                    <div className="space"></div>
+                    <p id="scoreLeft"></p>
                 </div>
             </div>
         </div>

@@ -19,8 +19,9 @@ const TeamRight = () => {
             </div>
             <div className="teamTwo">
                 {/* score */}
-                <div className="teamScore" id="scoreRight">
-                    <p></p>
+                <div className="teamScore">
+                    <div className="space"></div>
+                    <p id="scoreRight"></p>
                 </div>
                 {/* nom d'équipe */}
                 <div className="team" id="teamRight">
