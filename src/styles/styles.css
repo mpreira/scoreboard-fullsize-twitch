@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.inner {
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+}
+
+.box {
+  width: 80%;
+}
+
+.score {
+  width: 40%;
+  height: 80px;
+  background-color: #e5dbe7;
+  display: flex;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.cards {
+  width: 42.64%;
+  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 120px;
+}
+
+.card {
+  position: absolute;
+  top: -6px;
+  z-index: -1;
+  height: 30px;
+}
+
+#yellowCardLeftTwo {
+  left: 10px;
+}
+
+#yellowCardLeftThree {
+  left: 20px;
+}
+
+#yellowCardRightTwo {
+  right: 210px;
+}
+
+#yellowCardRightThree {
+  right: 200px;
+}
+
+#redCardLeftOne {
+  left: 50px;
+}
+
+#redCardLeftTwo {
+  left: 60px;
+}
+
+#redCardLeftThree {
+  left: 70px;
+}
+
+#redCardRightOne {
+  right: 250px;
+}
+
+#redCardRightTwo {
+  right: 260px;
+}
+
+#redCardRightThree {
+  right: 270px;
+}
+
+.teamLeftCards {
+  width: 30%;
+}
+
+.teamRightCards {
+  width: 30%;
+}
+
+.team {
+  width: 35%;
+}
+.team p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 40px;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.teamColor {
+  width: 100%;
+  height: 5px;
+}
+
+#teamColorLeft {
+  background-color: #b2d9f4;
+}
+
+#teamColorRight {
+  background-color: #be2b27;
+}
+
+.logoTeam {
+  width: 15%;
+  background-color: #ffffff;
+}
+.logoTeam img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamScore {
+  width: 15%;
+  background-color: #77439E;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 40px;
+  font-size: 2em;
+  font-weight: 500;
+  color: #e5dbe7;
+}
+
+.separator {
+  height: 80px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  background-color: #77439E;
+  color: #e5dbe7;
+}
+
+.time {
+  width: 9.94%;
+  height: 60px;
+  background-color: #e5dbe7;
+  color: #77439E;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  display: flex;
+  margin-left: 17.64%;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.separatorTime {
+  color: #77439E;
+  font-size: 1em;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.otherBox {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.yellowCard {
+  margin-top: 40px;
+  color: yellow;
+}
+
+.yellowCardImage1 {
+  height: 40px;
+}
+
+.logoLeftCard {
+  height: 80px;
+  position: absolute;
+  top: 40px;
+  right: 63px;
+  z-index: -1;
+}
+
+.logoRightCard {
+  height: 80px;
+  position: absolute;
+  top: 80px;
+  right: 63px;
+  z-index: -1;
+}/*# sourceMappingURL=styles.css.map */
