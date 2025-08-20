@@ -1,20 +1,23 @@
-import React from 'react';
 import { addPoints, resetScores, startTimer, stopTimer, resetTimer, toggleYellow, toggleRed, setTeamName, getTeamName } from '../utils/Control';
 // STYLES
 import '../styles/remote.css';
 
 const Remote = () =>{
-    return(<div>
-        <input
-            type="text"
-            defaultValue={getTeamName('left')}
-            onBlur={(e) => setTeamName('left', e.target.value)}
-        />
-        <input
-            type="text"
-            defaultValue={getTeamName('right')}
-            onBlur={(e) => setTeamName('right', e.target.value)}
-        />
+    return(
+    <div className="remote">
+        <div className="teamsInput">
+            <input
+                type="text"
+                defaultValue={getTeamName('left')}
+                onBlur={(e) => setTeamName('left', e.target.value)}
+            />
+            <input
+                type="text"
+                defaultValue={getTeamName('right')}
+                onBlur={(e) => setTeamName('right', e.target.value)}
+            />
+        </div>
+        
         <div className="Team One">
             <h2 id="teamNameLeftTitle">{getTeamName('left')}</h2>
             <div className="teamOnePlus">
@@ -44,7 +47,7 @@ const Remote = () =>{
         <button id="resetScores" onClick={resetScores}>Reset Scores</button>
         <div className="timeControl">
             <h2>Time Control</h2>
-            <div id="time">
+            <div id="time" className="remoteTime">
                 <span id="minutes">00</span>:<span id="seconds">00</span>
             </div>
             <button onClick={startTimer}>Start</button>
