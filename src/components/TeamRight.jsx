@@ -1,9 +1,16 @@
+import { useEffect } from 'react';
 import Yellow from '../assets/cards/carton_jaune.png';
 import Red from '../assets/cards/carton_rouge.png';
-import { getTeamName, getTeamFlag } from '../utils/Control';
+import { getTeamName, getTeamFlag, applyTeamColors } from '../utils/Control';
 
 const TeamRight = () => {
     const logo = getTeamFlag('right');
+    const teamName = getTeamName("right");
+
+    useEffect(() => {
+        applyTeamColors(teamName, "Right");
+        console.log(teamName);
+    }, [teamName]);
 
     return (
         <div className="BlockTeamRight">
@@ -27,7 +34,7 @@ const TeamRight = () => {
                 {/* nom d'équipe */}
                 <div className="team" id="teamRight">
                     <div className="teamColor" id="teamColorRight"></div>
-                    <p id="teamNameRight">{getTeamName('right')}</p>
+                    <p id="teamNameRight">{teamName}</p>
                 </div>
                 {/* logo */}
                 <div className="logoTeam" id="logoRight">

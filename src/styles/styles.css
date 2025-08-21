@@ -1,5 +1,34 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  /* Gloria */
+  --gloria-red: #9e1b52;
+  --gloria-purple-1: #77439E;
+  --gloria-pale-lilac: #e5dbe7;
+  /* Teams */
+  --england-red: #ca0429;
+  --england-white: #ffffff;
+  --usa-blue: #052d5c;
+  --usa-red: #b4113d;
+  --france-blue: #022154;
+  --france-red: #cf0621;
+  --japan-red: #cf0621;
+  --brasil-green: #00953c;
+  --brasil-yellow: #ffc622;
+  --brasil-blue: #2b2181;
+  --italy-blue: #476ece;
+  --italy-green: #069343;
+  --italy-red: #cf2635;
+  --rsa-green: #007847;
+  --rsa-gold: #ffb917;
+  --nzl-black: #000000;
+  --nzl-silver: #c0c0c0;
+  --ireland-green: #057046;
+  --australia-gold: #ffb300;
+  --canada-red: #ff0000;
+  --scotland-blue: #005dba;
+  --wales-red: #d30028;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +61,7 @@
 .score {
   width: 40%;
   height: 80px;
-  background-color: #e5dbe7;
+  background-color: var(--gloria-pale-lilac);
   display: flex;
   margin-left: 40px;
   margin-top: 40px;
@@ -122,7 +151,7 @@
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff;
+  color: white;
 }
 
 .teamColor, .space {
@@ -131,20 +160,20 @@
 }
 
 #teamColorLeft {
-  background-color: #ca0429;
+  background-color: var(--england-red);
 }
 
 #teamNameLeft {
-  color: #ca0429;
-  background-color: #ffffff;
+  color: var(--england-red);
+  background-color: var(--england-white);
 }
 
 #teamColorRight {
-  background-color: #052d5c;
+  background-color: var(--usa-blue);
 }
 
 #teamNameRight {
-  color: #b4113d;
+  color: var(--usa-red);
   background-color: white;
 }
 
@@ -157,7 +186,7 @@
 .teamOne {
   display: flex;
   width: 100%;
-  color: #ffffff;
+  color: var(--england-white);
 }
 
 .teamTwo {
@@ -185,31 +214,16 @@
   flex-direction: row;
 }
 
-/* .logoTeam {
-    max-width: 100px; // largeur fixe pour le slot du logo
-    height: 100px; // hauteur fixe identique à ton bloc
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0; // empêche le conteneur de rétrécir
-
-    img {
-        height: 100px;
-        max-width: 167px;
-        object-fit: cover;
-        object-position : top left; // centrer l'image
-    }
-} */
 .teamScore {
   width: 184.09px;
-  background-color: #9e1b52;
+  background-color: var(--gloria-red);
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  color: #e5dbe7;
+  color: var(--gloria-pale-lilac);
 }
 .teamScore p {
   height: 90%;
@@ -228,15 +242,15 @@
   align-items: center;
   justify-content: center;
   font-size: 2.5em;
-  background-color: #77439E;
-  color: #e5dbe7;
+  background-color: var(--gloria-purple-1);
+  color: var(--gloria-pale-lilac);
 }
 
 .time {
   width: 15%;
   height: 100px;
-  background-color: #e5dbe7;
-  color: #9e1b52;
+  background-color: var(--gloria-pale-lilac);
+  color: var(--gloria-red);
   align-items: center;
   justify-content: center;
   font-size: 3em;
@@ -245,7 +259,7 @@
 }
 
 .separatorTime {
-  color: #9e1b52;
+  color: var(--gloria-red);
   font-size: 1em;
   margin-left: 2px;
   margin-right: 2px;
@@ -257,11 +271,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.yellowCard {
-  margin-top: 40px;
-  color: yellow;
 }
 
 .yellowCardImage1 {
