@@ -167,6 +167,7 @@
 }
 
 .logoTeam {
+  display: flex;
   height: 100px;
   width: 184.09px;
 }
@@ -177,8 +178,11 @@
 }
 
 .logoTeam, #logoLeft {
-  display: flex;
   flex-direction: row-reverse;
+}
+
+.logoTeam, #logoRight {
+  flex-direction: row;
 }
 
 /* .logoTeam {

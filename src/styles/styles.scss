@@ -185,6 +185,7 @@ $gloria-pale-lilac: #e5dbe7;
 
 .logoTeam {
     //width: 15%; //40px;
+    display: flex;
     height: 100px;
     width: 184.09px;
     f
@@ -196,8 +197,11 @@ $gloria-pale-lilac: #e5dbe7;
 }
 
 .logoTeam, #logoLeft{
-    display: flex;
     flex-direction: row-reverse;
+}
+
+.logoTeam, #logoRight{
+    flex-direction: row;
 }
 
 /* .logoTeam {

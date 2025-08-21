@@ -1,6 +1,17 @@
+// DRAPEAUX
 import EnglandLogo from '../assets/LOGOS/Flag_of_England.svg.png';
 import FranceLogo from '../assets/LOGOS/Ensign_of_France.svg.png';
 import USALogo from '../assets/LOGOS/Flag_of_the_United_States.svg.png';
+import BrasilLogo from '../assets/LOGOS/Flag_of_Brazil.svg.png';
+import ItalyLogo from '../assets/LOGOS/Flag_of_Italy.svg.png';
+import RSALogo from '../assets/LOGOS/Flag_of_South_Africa.svg.png';
+import NZLLogo from '../assets/LOGOS/Flag_of_New_Zealand.svg.png';
+import IrelandLogo from '../assets/LOGOS/irlande.png';
+import AustraliaLogo from '../assets/LOGOS/Flag_of_Australia_(converted).svg.png';
+import CanadaLogo from '../assets/LOGOS/Flag_of_Canada.svg.png';
+import ScotlandLogo from '../assets/LOGOS/Flag_of_Scotland.svg.png';
+import WalesLogo from '../assets/LOGOS/Flag_of_Wales.svg.png';
+import JapanLogo from '../assets/LOGOS/Flag_of_Japan.svg.png';
 
 let timerInterval = null;
 // NOMS D'ÉQUIPES
@@ -33,21 +44,38 @@ function ensureInit() {
     ensureTeamNames();
 }
 
+// dictionnaire : clés = noms possibles, valeurs = logos
+const teamLogos = {
+    'Angleterre': EnglandLogo,
+    'England': EnglandLogo,   // alias possible
+    'France': FranceLogo,  // alias possible
+    'USA': USALogo,
+    'États-Unis': USALogo,
+    'Brésil': BrasilLogo,
+    'Brazil': BrasilLogo,     // alias possible
+    'Italie': ItalyLogo,
+    'Italy': ItalyLogo,       // alias possible
+    'Afrique du Sud': RSALogo,
+    'South Africa': RSALogo, // alias possible
+    'Nouvelle-Zélande': NZLLogo,
+    'New Zealand': NZLLogo,  // alias possible
+    'Irlande': IrelandLogo,
+    'Ireland': IrelandLogo,  // alias possible
+    'Australie': AustraliaLogo,
+    'Australia': AustraliaLogo, // alias possible
+    'Canada': CanadaLogo,
+    'Écosse': ScotlandLogo,
+    'Scotland': ScotlandLogo, // alias possible
+    'Pays de Galles': WalesLogo,
+    'Wales': WalesLogo,      // alias possible
+    'Japon': JapanLogo,
+    'Japan': JapanLogo,     // alias possible
+};
+
 // --- GET TEAM FLAG ---
 export function getTeamFlag(side) {
     const teamName = getTeamName(side);
-
-    switch (teamName) {
-        case 'Angleterre':
-            return EnglandLogo;
-        case 'France':
-            return FranceLogo;
-        case 'USA':
-        case 'États-Unis':
-            return USALogo;
-        default:
-            return null; // ou une image par défaut si tu préfères
-    }
+    return teamLogos[teamName] || null; // ou un logo par défaut si tu veux
 }
 
 // --- Score functions ---
