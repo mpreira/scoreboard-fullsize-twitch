@@ -1,9 +1,10 @@
-import USALogo from '../assets/LOGOS/Flag_of_the_United_States.svg.png';
 import Yellow from '../assets/cards/carton_jaune.png';
 import Red from '../assets/cards/carton_rouge.png';
-import { getTeamName } from '../utils/Control';
+import { getTeamName, getTeamFlag } from '../utils/Control';
 
 const TeamRight = () => {
+    const logo = getTeamFlag('right');
+
     return (
         <div className="BlockTeamRight">
             <div className="cardsRight">
@@ -30,7 +31,7 @@ const TeamRight = () => {
                 </div>
                 {/* logo */}
                 <div className="logoTeam" id="logoRight">
-                    <img src={USALogo} alt="Logo équipe 2" />
+                    <img src={logo} alt="Logo équipe 2" />
                 </div>
             </div>
         </div>

@@ -23,7 +23,8 @@ $gloria-pale-lilac: #e5dbe7;
 }
 
 .box {
-    width: 80%;
+    //width: 80%; 
+    width : 1536px;
     margin-left: 10%;
     display: flex;
 }
@@ -124,7 +125,8 @@ $gloria-pale-lilac: #e5dbe7;
 }
 
 .team {
-    width: 43%; //80px;
+    //width: 43%; //80px;
+    width : 263.86px;
 
     p {
         height: 90%;
@@ -164,6 +166,7 @@ $gloria-pale-lilac: #e5dbe7;
 
 .BlockTeamLeft, .BlockTeamRight {
     width: 40%;
+    //width : 614.4px;
     height: 100px;
     display: flex;
 }
@@ -182,20 +185,44 @@ $gloria-pale-lilac: #e5dbe7;
 
 .logoTeam {
     //width: 15%; //40px;
+    display: flex;
     height: 100px;
+    width: 184.09px;
+    f
 
     img {
-        width: 100%;
         height: 100%;
         object-fit: contain;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 }
 
+.logoTeam, #logoLeft{
+    flex-direction: row-reverse;
+}
+
+.logoTeam, #logoRight{
+    flex-direction: row;
+}
+
+/* .logoTeam {
+    max-width: 100px; // largeur fixe pour le slot du logo
+    height: 100px; // hauteur fixe identique à ton bloc
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; // empêche le conteneur de rétrécir
+
+    img {
+        height: 100px;
+        max-width: 167px;
+        object-fit: cover;
+        object-position : top left; // centrer l'image
+    }
+} */
+
 .teamScore {
-    width: 30%; //40px;
+    //width: 30%; //40px;
+    width : 184.09px;
     background-color: $gloria-red;
     height: 100%;
     display: flex;
@@ -229,6 +256,7 @@ $gloria-pale-lilac: #e5dbe7;
 
 .time {
     width: 15%;
+    //width : 230px;
     height: 100px;
     background-color: $gloria-pale-lilac;
     color: $gloria-red;

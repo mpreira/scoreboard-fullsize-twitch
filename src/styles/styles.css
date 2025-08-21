@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
@@ -13,7 +14,7 @@
 }
 
 .box {
-  width: 80%;
+  width: 1536px;
   margin-left: 10%;
   display: flex;
 }
@@ -110,7 +111,7 @@
 }
 
 .team {
-  width: 43%;
+  width: 263.86px;
 }
 .team p {
   height: 90%;
@@ -166,20 +167,41 @@
 }
 
 .logoTeam {
+  display: flex;
   height: 100px;
+  width: 184.09px;
 }
-.logoTeam img {
-  width: 100%;
+.logoTeam f img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
+.logoTeam, #logoLeft {
+  flex-direction: row-reverse;
+}
+
+.logoTeam, #logoRight {
+  flex-direction: row;
+}
+
+/* .logoTeam {
+    max-width: 100px; // largeur fixe pour le slot du logo
+    height: 100px; // hauteur fixe identique à ton bloc
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; // empêche le conteneur de rétrécir
+
+    img {
+        height: 100px;
+        max-width: 167px;
+        object-fit: cover;
+        object-position : top left; // centrer l'image
+    }
+} */
 .teamScore {
-  width: 30%;
+  width: 184.09px;
   background-color: #9e1b52;
   height: 100%;
   display: flex;
