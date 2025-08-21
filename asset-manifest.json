@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mpreira/scoreboard-fullsize-twitch/static/css/main.d8ee2fdc.css",
-    "main.js": "/mpreira/scoreboard-fullsize-twitch/static/js/main.799618ad.js",
+    "main.js": "/mpreira/scoreboard-fullsize-twitch/static/js/main.a1ee28f4.js",
     "static/js/453.f16316d7.chunk.js": "/mpreira/scoreboard-fullsize-twitch/static/js/453.f16316d7.chunk.js",
     "static/media/Flag_of_Wales.svg.png": "/mpreira/scoreboard-fullsize-twitch/static/media/Flag_of_Wales.svg.fd4f7d7689d38421e621.png",
     "static/media/Flag_of_the_United_States.svg.png": "/mpreira/scoreboard-fullsize-twitch/static/media/Flag_of_the_United_States.svg.e139a748c16e66e46180.png",
@@ -11,11 +11,11 @@
     "static/media/Flag_of_Australia_(converted).svg.png": "/mpreira/scoreboard-fullsize-twitch/static/media/Flag_of_Australia_(converted).svg.3c3d940792a83b7937be.png",
     "index.html": "/mpreira/scoreboard-fullsize-twitch/index.html",
     "main.d8ee2fdc.css.map": "/mpreira/scoreboard-fullsize-twitch/static/css/main.d8ee2fdc.css.map",
-    "main.799618ad.js.map": "/mpreira/scoreboard-fullsize-twitch/static/js/main.799618ad.js.map",
+    "main.a1ee28f4.js.map": "/mpreira/scoreboard-fullsize-twitch/static/js/main.a1ee28f4.js.map",
     "453.f16316d7.chunk.js.map": "/mpreira/scoreboard-fullsize-twitch/static/js/453.f16316d7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d8ee2fdc.css",
-    "static/js/main.799618ad.js"
+    "static/js/main.a1ee28f4.js"
   ]
 }
