@@ -1,9 +1,10 @@
-import EnglandLogo from '../assets/LOGOS/Flag_of_England.svg.png';
 import Yellow from '../assets/cards/carton_jaune.png';
 import Red from '../assets/cards/carton_rouge.png';
-import { getTeamName } from '../utils/Control';
+import { getTeamName, getTeamFlag } from '../utils/Control';
 
 const TeamLeft = () => {
+    const logo = getTeamFlag('left');
+
     return (
         <div className="BlockTeamLeft">
             <div className="cardsLeft">
@@ -20,7 +21,7 @@ const TeamLeft = () => {
             <div className="teamOne">
                 {/* logo */}
                 <div className="logoTeam" id="logoLeft" >
-                    <img src={EnglandLogo} alt="Logo équipe 1" />
+                    <img src={logo} alt="Logo équipe 1" />
                 </div>
                 
                 {/* nom d'équipe */}

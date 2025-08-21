@@ -1,3 +1,7 @@
+import EnglandLogo from '../assets/LOGOS/Flag_of_England.svg.png';
+import FranceLogo from '../assets/LOGOS/Ensign_of_France.svg.png';
+import USALogo from '../assets/LOGOS/Flag_of_the_United_States.svg.png';
+
 let timerInterval = null;
 // NOMS D'ÉQUIPES
 // Set team name
@@ -27,6 +31,23 @@ function ensureInit() {
     if (localStorage.getItem('timerSeconds') === null) localStorage.setItem('timerSeconds', '0');
     if (localStorage.getItem('timerRunning') === null) localStorage.setItem('timerRunning', 'false');
     ensureTeamNames();
+}
+
+// --- GET TEAM FLAG ---
+export function getTeamFlag(side) {
+    const teamName = getTeamName(side);
+
+    switch (teamName) {
+        case 'Angleterre':
+            return EnglandLogo;
+        case 'France':
+            return FranceLogo;
+        case 'USA':
+        case 'États-Unis':
+            return USALogo;
+        default:
+            return null; // ou une image par défaut si tu préfères
+    }
 }
 
 // --- Score functions ---
