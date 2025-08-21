@@ -14,6 +14,7 @@ import WalesLogo from '../assets/LOGOS/Flag_of_Wales.svg.png';
 import JapanLogo from '../assets/LOGOS/Flag_of_Japan.svg.png';
 
 let timerInterval = null;
+
 // NOMS D'ÉQUIPES
 // Set team name
 export function setTeamName(side, name) {
@@ -71,6 +72,66 @@ const teamLogos = {
     'Japon': JapanLogo,
     'Japan': JapanLogo,     // alias possible
 };
+
+// Association équipe -> variables CSS
+const teamColors = {
+    England: { primary: "--england-red", secondary: "--england-white", text: "--england-red" },
+    USA: { primary: "--usa-blue", secondary: "--england-white", text: "--usa-red" },
+    France: { primary: "--france-blue", secondary: "--england-white", text: "--france-red" },
+    Japan: { primary: "--japan-red", secondary: "--england-white", text: "--japan-red" },
+    Brasil: { primary: "--brasil-green", secondary: "--brasil-yellow", text: "--brasil-blue" },
+    Italy: { primary: "--italy-blue", secondary: "--england-white", text: "--italy-red" },
+    RSA: { primary: "--rsa-green", secondary: "--rsa-gold", text: "--rsa-green" },
+    NZL: { primary: "--nzl-black", secondary: "--nzl-silver", text: "--nzl-silver" },
+    Ireland: { primary: "--ireland-green", secondary: "--england-white", text: "--ireland-green" },
+    Australia: { primary: "--australia-gold", secondary: "--england-white", text: "--australia-gold" },
+    Canada: { primary: "--canada-red", secondary: "--england-white", text: "--canada-red" },
+    Scotland: { primary: "--scotland-blue", secondary: "--england-white", text: "--scotland-blue" },
+    Wales: { primary: "--wales-red", secondary: "--england-white", text: "--wales-red" },
+};
+
+function normalizeTeamName(name) {
+    const aliases = {
+        'Angleterre': 'England',
+        'États-Unis': 'USA',
+        'Brésil': 'Brasil',
+        'Italie': 'Italy',
+        'Afrique du Sud': 'RSA',
+        'South Africa': 'RSA',
+        'Nouvelle-Zélande': 'NZL',
+        'New Zealand': 'NZL',
+        'Irlande': 'Ireland',
+        'Australie': 'Australia',
+        'Écosse': 'Scotland',
+        'Pays de Galles': 'Wales',
+        'Japon': 'Japan',
+    };
+    return aliases[name] || name;
+}
+
+// Fonction utilitaire pour récupérer une couleur CSS var
+function getCssVar(varName) {
+    return getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+}
+
+// Fonction principale pour appliquer les couleurs
+export function applyTeamColors(teamName, side) {
+    const normalized = normalizeTeamName(teamName);
+    const colors = teamColors[normalized] || { primary: "--gloria-purple-1", secondary: "--gloria-pale-lilac", text: "--gloria-red" };
+
+    const primary = getCssVar(colors.primary);
+    const secondary = getCssVar(colors.secondary);
+    const text = getCssVar(colors.text);
+
+    const colorEl = document.getElementById(`teamColor${side}`);
+    const nameEl = document.getElementById(`teamName${side}`);
+
+    if (colorEl && nameEl) {
+        colorEl.style.backgroundColor = primary;
+        nameEl.style.backgroundColor = secondary;
+        nameEl.style.color = text;
+    }
+}
 
 // --- GET TEAM FLAG ---
 export function getTeamFlag(side) {
