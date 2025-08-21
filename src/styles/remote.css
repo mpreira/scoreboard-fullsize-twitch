@@ -1,3 +1,27 @@
+.remote {
+  background-color: #e5dbe7;
+  padding: 20px;
+}
+
+button {
+  height: 32px;
+  padding: 8px 16px;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.teamsInput {
+  margin: 0 0 20px 0;
+}
+
+#teamNameLeftTitle,
+#teamNameRightTitle, h2, h3, .remoteTime {
+  color: #9e1b52;
+  text-align: center;
+  padding-top: 10px;
+}
+
 .timeControl {
   margin: 20px 0 20px 0;
 }
