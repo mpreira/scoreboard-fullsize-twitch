@@ -1,11 +1,18 @@
-import { addPoints, resetScores, startTimer, stopTimer, resetTimer, toggleYellow, toggleRed, setTeamName, getTeamName } from '../utils/Control';
+import { addPoints, resetScores, startTimer, stopTimer, resetTimer, toggleYellow, toggleRed, setTeamName, getTeamName, setTimer } from '../utils/Control';
 // STYLES
 import '../styles/remote.css';
+import Time from './Time';
 
 const Remote = () =>{
+    const handleChange = (e) => {
+        const [m, s] = e.target.value.split(":").map((n) => parseInt(n, 10) || 0);
+        const seconds = m * 60 + s;
+        setTimer(seconds);
+    };
+
     return(
     <div className="remote">
-        <div className="teamsInput">
+        <div className="remoteInput">
             <input
                 type="text"
                 defaultValue={getTeamName('left')}
@@ -48,7 +55,16 @@ const Remote = () =>{
         <div className="timeControl">
             <h2>Time Control</h2>
             <div id="time" className="remoteTime">
-                <span id="minutes">00</span>:<span id="seconds">00</span>
+                <Time />
+            </div>
+            <div className='remoteInput'>
+                    <input
+                        type="text"
+                        pattern="^([0-9]{1,3}):([0-5][0-9])$"
+                        placeholder="mm:ss (max 200:00)"
+                        defaultValue="00:00"
+                        onChange={handleChange}
+                    />
             </div>
             <button onClick={startTimer}>Start</button>
             <button onClick={stopTimer}>Stop</button>

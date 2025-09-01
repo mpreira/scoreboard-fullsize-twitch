@@ -191,6 +191,12 @@ export function resetTimer() {
     emitChange({ type: 'timer-reset', seconds: 0 });
 }
 
+export function setTimer(seconds) {
+    ensureInit();
+    localStorage.setItem('timerSeconds', seconds);
+    emitChange({ type: 'timer', seconds });
+}
+
 // --- Cards / Fouls functions ---
 function cardKey(side, color, index) {
     const s = side === 'left' ? 'left' : 'right';
