@@ -7,14 +7,29 @@ $gloria-gold : #ffba00;
 .remote{
     background-color: $gloria-pale-lilac;
     padding : 20px;
+    text-align: center;
 }
 
 button {
-    height: 32px;
-    padding : 8px 16px;
+    padding : 8px 22px;
+    border-radius: 6px;
     margin : 5px;
     font-weight: bold;
     font-size: 14px;
+    border : 0;
+}
+
+input {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 0;
+    text-align: center;
+}
+
+input :focus {
+    background-color: white;
+    border: 1px solid $gloria-red;
 }
 
 .remoteInput{

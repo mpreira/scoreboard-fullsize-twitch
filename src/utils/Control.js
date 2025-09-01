@@ -77,11 +77,11 @@ const teamLogos = {
 const teamColors = {
     England: { primary: "--england-red", secondary: "--england-white", text: "--england-red" },
     USA: { primary: "--usa-blue", secondary: "--england-white", text: "--usa-red" },
-    France: { primary: "--france-blue", secondary: "--england-white", text: "--france-red" },
+    France: { primary: "--france-red", secondary: "--france-blue", text: "--england-white" },
     Japan: { primary: "--japan-red", secondary: "--england-white", text: "--japan-red" },
     Brasil: { primary: "--brasil-green", secondary: "--brasil-yellow", text: "--brasil-blue" },
     Italy: { primary: "--italy-blue", secondary: "--england-white", text: "--italy-red" },
-    RSA: { primary: "--rsa-green", secondary: "--rsa-gold", text: "--rsa-green" },
+    RSA: { primary: "--rsa-gold", secondary: "--rsa-green", text: "--rsa-gold" },
     NZL: { primary: "--nzl-black", secondary: "--nzl-silver", text: "--nzl-silver" },
     Ireland: { primary: "--ireland-green", secondary: "--england-white", text: "--ireland-green" },
     Australia: { primary: "--australia-gold", secondary: "--england-white", text: "--australia-gold" },
