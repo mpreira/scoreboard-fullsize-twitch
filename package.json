@@ -1,7 +1,7 @@
 {
   "name": "scoreboard-fullsize-twitch",
   "homepage": "https://mpreira.github.io/scoreboard-fullsize-twitch",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
