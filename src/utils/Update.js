@@ -25,12 +25,15 @@ function setTimerFromLocalStorage() {
   setTextIfExists('seconds', ss);
 }
 
-function reload() {
+export function reload() {
   // Scores
   setTimerFromLocalStorage();
   setTextIfExists('scoreLeft', localStorage.getItem('leftScore') || '0');
   setTextIfExists('scoreRight', localStorage.getItem('rightScore') || '0');
     reloadTeamNames()
+
+  // Mi-temps
+  setHalfFromLocalStorage();
 
   // Timer (minutes:seconds)
   const secs = parseInt(localStorage.getItem('timerSeconds') || '0', 10);
@@ -81,4 +84,20 @@ function reloadTeamNames() {
     const rightName = localStorage.getItem('teamNameRight') || 'Team Two';
     setTextIfExists('teamNameLeftTitle', leftName);
     setTextIfExists('teamNameRightTitle', rightName);
+}
+// Half-time display
+function setHalfFromLocalStorage() {
+  const half = localStorage.getItem('half') || '1'; // défaut = 1ère mi-temps
+  let label = '';
+  switch (half) {
+    case '1':
+      label = 'MT 1';
+      break;
+    case '2':
+      label = 'MT 2';
+      break;
+    default:
+      label = '';
+  }
+  setTextIfExists('halfLabel', label);
 }

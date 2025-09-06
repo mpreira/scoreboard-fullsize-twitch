@@ -300,3 +300,17 @@
     right: 63px;
     z-index: -1;
 }
+
+.period {
+    position: absolute;
+    bottom: 105px;
+    left: 46.5%;
+    transform: translateX(-50%);
+    background-color: var(--gloria-red);
+    color: var(--gloria-pale-lilac);
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: 700;
+    border-radius: 5px;
+    z-index: 1;
+}

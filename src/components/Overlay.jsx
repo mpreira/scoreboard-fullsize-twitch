@@ -16,6 +16,7 @@ const Overlay = () => {
             <main>
                 <div className="inner">
                     <div className="box">
+                        <div className="period" id='halfLabel'>MT 1</div>
                         <>
                             <TeamLeft />
                             <Time />

@@ -220,3 +220,9 @@ export function toggleYellow(side, index) {
 export function toggleRed(side, index) {
     toggleCard(side, 'red', index);
 }
+
+// --- Half functions ---
+export function setHalf(value) {
+    localStorage.setItem('half', value);
+    emitChange({ type: 'half', value });
+}
