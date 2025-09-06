@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/scoreboard-fullsize-twitch/static/css/main.615b710f.css",
+    "main.css": "/scoreboard-fullsize-twitch/static/css/main.ed76a297.css",
     "main.js": "/scoreboard-fullsize-twitch/static/js/main.d3ccebed.js",
     "static/js/453.f16316d7.chunk.js": "/scoreboard-fullsize-twitch/static/js/453.f16316d7.chunk.js",
     "static/media/Flag_of_Wales.svg.png": "/scoreboard-fullsize-twitch/static/media/Flag_of_Wales.svg.fd4f7d7689d38421e621.png",
@@ -10,12 +10,12 @@
     "static/media/Flag_of_New_Zealand.svg.png": "/scoreboard-fullsize-twitch/static/media/Flag_of_New_Zealand.svg.a082f9858ec87aa4b42a.png",
     "static/media/Flag_of_Australia_(converted).svg.png": "/scoreboard-fullsize-twitch/static/media/Flag_of_Australia_(converted).svg.3c3d940792a83b7937be.png",
     "index.html": "/scoreboard-fullsize-twitch/index.html",
-    "main.615b710f.css.map": "/scoreboard-fullsize-twitch/static/css/main.615b710f.css.map",
+    "main.ed76a297.css.map": "/scoreboard-fullsize-twitch/static/css/main.ed76a297.css.map",
     "main.d3ccebed.js.map": "/scoreboard-fullsize-twitch/static/js/main.d3ccebed.js.map",
     "453.f16316d7.chunk.js.map": "/scoreboard-fullsize-twitch/static/js/453.f16316d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.615b710f.css",
+    "static/css/main.ed76a297.css",
     "static/js/main.d3ccebed.js"
   ]
 }
