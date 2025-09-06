@@ -258,6 +258,19 @@
   margin-bottom: 5%;
 }
 
+.time.overtime {
+  width: 15%;
+  height: 100px;
+  background-color: var(--gloria-red);
+  color: var(--gloria-pale-lilac);
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: 700;
+  display: flex;
+  margin-bottom: 5%;
+}
+
 .separatorTime {
   color: var(--gloria-red);
   font-size: 1em;
@@ -291,4 +304,18 @@
   top: 80px;
   right: 63px;
   z-index: -1;
+}
+
+.period {
+  position: absolute;
+  bottom: 105px;
+  left: 46.5%;
+  transform: translateX(-50%);
+  background-color: var(--gloria-red);
+  color: var(--gloria-pale-lilac);
+  padding: 10px 20px;
+  font-size: 1.5em;
+  font-weight: 700;
+  border-radius: 5px;
+  z-index: 1;
 }/*# sourceMappingURL=styles.css.map */

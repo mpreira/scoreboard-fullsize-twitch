@@ -1,17 +1,28 @@
 import { addPoints, resetScores, startTimer, stopTimer, resetTimer, toggleYellow, toggleRed, setTeamName, getTeamName, setTimer } from '../utils/Control';
+import { setHalf } from '../utils/Control';
+import Time from './Time';
+import { useState } from 'react';
 // STYLES
 import '../styles/remote.css';
-import Time from './Time';
 
-const Remote = () =>{
+
+
+const Remote = () => {
+
+    const [refreshKey, setRefreshKey] = useState(0);
+
     const handleChange = (e) => {
         const [m, s] = e.target.value.split(":").map((n) => parseInt(n, 10) || 0);
         const seconds = m * 60 + s;
         setTimer(seconds);
     };
 
+    const refreshLocal = () => {
+        setRefreshKey(prev => prev + 1);
+    };
+
     return(
-    <div className="remote">
+        <div className="remote" key={refreshKey}>
         <div className="remoteInput">
             <input
                 type="text"
@@ -24,6 +35,16 @@ const Remote = () =>{
                 onBlur={(e) => setTeamName('right', e.target.value)}
             />
         </div>
+
+        <>
+                <select
+                    value={localStorage.getItem('half') || '1'}
+                    onChange={(e) => setHalf(e.target.value)}
+                >
+                    <option value="1">1ère mi-temps</option>
+                    <option value="2">2ème mi-temps</option>
+                </select>
+        </>
         
         <div className="Team One">
             <h2 id="teamNameLeftTitle">{getTeamName('left')}</h2>
@@ -51,7 +72,8 @@ const Remote = () =>{
                 <button onClick={() => addPoints("right", -5)}>-5</button>
             </div>
         </div>
-        <button id="resetScores" onClick={resetScores}>Reset Scores</button>
+        <button id="resetScores" onClick={resetScores}>Reset Scores</button><br />
+        <button onClick={refreshLocal}>Rafraîchir</button>
         <div className="timeControl">
             <h2>Time Control</h2>
             <div id="time" className="remoteTime">

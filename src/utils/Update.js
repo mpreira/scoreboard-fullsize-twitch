@@ -25,12 +25,27 @@ function setTimerFromLocalStorage() {
   setTextIfExists('seconds', ss);
 }
 
-function reload() {
+function setTimerColor(overtime) {
+  const minutesEl = document.getElementById('minutes');
+  const secondsEl = document.getElementById('seconds');
+  const timeEl = document.getElementById('time');
+  if (!minutesEl || !secondsEl || !timeEl) return;
+  if (overtime) {
+    timeEl.classList.add('overtime');
+  } else {
+    timeEl.classList.remove('overtime');
+  }
+}
+
+export function reload() {
   // Scores
   setTimerFromLocalStorage();
   setTextIfExists('scoreLeft', localStorage.getItem('leftScore') || '0');
   setTextIfExists('scoreRight', localStorage.getItem('rightScore') || '0');
     reloadTeamNames()
+
+  // Mi-temps
+  setHalfFromLocalStorage();
 
   // Timer (minutes:seconds)
   const secs = parseInt(localStorage.getItem('timerSeconds') || '0', 10);
@@ -38,6 +53,16 @@ function reload() {
   const s = String(secs % 60).padStart(2, '0');
   setTextIfExists('minutes', mins);
   setTextIfExists('seconds', s);
+
+  // Add overtime class logic
+  const half = localStorage.getItem('half') || '1';
+  if (half === '1') {
+    setTimerColor(secs > 2400);
+  } else if (half === '2') {
+    setTimerColor(secs > 4800);
+  } else {
+    setTimerColor(false);
+  }
 
   // Cards (CJ/CR)
   setDisplayFromKey('yellowCardLeftOne', 'leftYellowOneStatus');
@@ -81,4 +106,20 @@ function reloadTeamNames() {
     const rightName = localStorage.getItem('teamNameRight') || 'Team Two';
     setTextIfExists('teamNameLeftTitle', leftName);
     setTextIfExists('teamNameRightTitle', rightName);
+}
+// Half-time display
+function setHalfFromLocalStorage() {
+  const half = localStorage.getItem('half') || '1'; // défaut = 1ère mi-temps
+  let label = '';
+  switch (half) {
+    case '1':
+      label = 'MT 1';
+      break;
+    case '2':
+      label = 'MT 2';
+      break;
+    default:
+      label = '';
+  }
+  setTextIfExists('halfLabel', label);
 }
