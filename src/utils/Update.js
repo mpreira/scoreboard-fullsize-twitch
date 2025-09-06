@@ -25,6 +25,18 @@ function setTimerFromLocalStorage() {
   setTextIfExists('seconds', ss);
 }
 
+function setTimerColor(overtime) {
+  const minutesEl = document.getElementById('minutes');
+  const secondsEl = document.getElementById('seconds');
+  const timeEl = document.getElementById('time');
+  if (!minutesEl || !secondsEl || !timeEl) return;
+  if (overtime) {
+    timeEl.classList.add('overtime');
+  } else {
+    timeEl.classList.remove('overtime');
+  }
+}
+
 export function reload() {
   // Scores
   setTimerFromLocalStorage();
@@ -41,6 +53,16 @@ export function reload() {
   const s = String(secs % 60).padStart(2, '0');
   setTextIfExists('minutes', mins);
   setTextIfExists('seconds', s);
+
+  // Add overtime class logic
+  const half = localStorage.getItem('half') || '1';
+  if (half === '1') {
+    setTimerColor(secs > 2400);
+  } else if (half === '2') {
+    setTimerColor(secs > 4800);
+  } else {
+    setTimerColor(false);
+  }
 
   // Cards (CJ/CR)
   setDisplayFromKey('yellowCardLeftOne', 'leftYellowOneStatus');
