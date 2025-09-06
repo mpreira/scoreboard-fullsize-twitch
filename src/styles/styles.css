@@ -308,8 +308,8 @@
 
 .period {
   position: absolute;
-  bottom: 105px;
-  left: 46.5%;
+  bottom: 110px;
+  left: 47%;
   transform: translateX(-50%);
   background-color: var(--gloria-red);
   color: var(--gloria-pale-lilac);
