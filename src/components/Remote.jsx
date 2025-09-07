@@ -37,13 +37,28 @@ const Remote = () => {
         </div>
 
         <>
-                <select
-                    value={localStorage.getItem('half') || '1'}
-                    onChange={(e) => setHalf(e.target.value)}
-                >
-                    <option value="1">1ère mi-temps</option>
-                    <option value="2">2ème mi-temps</option>
-                </select>
+                <div className="halfSelection">
+                    <label>
+                        <input
+                            type="radio"
+                            name="half"
+                            value="1"
+                            checked={localStorage.getItem('half') === '1'}
+                            onChange={(e) => setHalf(e.target.value)}
+                        />
+                        1ère mi-temps
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="half"
+                            value="2"
+                            checked={localStorage.getItem('half') === '2'}
+                            onChange={(e) => setHalf(e.target.value)}
+                        />
+                        2ème mi-temps
+                    </label>
+                </div>
         </>
         
         <div className="Team One">
